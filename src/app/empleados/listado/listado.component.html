@@ -1,0 +1,22 @@
+<div class="col">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Sexo</th>
+        <th>Nacimiento</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emp of empleados">
+        <td>{{emp.nombre}}</td>
+        <td>{{emp.correo}}</td>
+        <td>{{emp.sexo}}</td>
+        <td>{{emp.fechaNacimiento}}</td>
+        <td><button class="btn btn-danger" (click)="eliminar(emp.id)">Eliminar</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
